@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Test",
-      "setup": "pip insntall pyarrow pandas",
+      "setup": "pip install pyarrow pandas",
       "run": "python3 tests.py",
       "input": "",
       "output": "",
