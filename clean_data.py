@@ -32,11 +32,11 @@ def create_key(df, n):
         # Una el texto sin espacios en blanco
         .str.join("")
         # Convierta el texto a una lista de n-gramas
-        .apply(lambda x: [x[i : i + n] for i in range(len(x) - n + 1)])
+        .map(lambda x: [x[i : i + n - 1] for i in range(len(x))])
         # Ordene la lista de n-gramas y remueve duplicados
         .apply(lambda x: sorted(set(x)))
         # Convierta la lista de ngramas a una cadena
-        .str.join(" ")
+        .str.join("")
     )
 
     return df
