@@ -54,7 +54,7 @@ def generate_cleaned_column(df):
     # Cree un diccionario con 'key' como clave y 'text' como valor
     keys = keys.set_index("key")["text"].to_dict()
     # Cree la columna 'cleaned' usando el diccionario
-    df["cleaned"] = df["fingerprint"].map(keys)
+    df["cleaned"] = df["key"].map(keys)
 
     return df
 
