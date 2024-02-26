@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Test",
+      "setup": "pip insntall pyarrow pandas",
+      "run": "python3 tests.py",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}
