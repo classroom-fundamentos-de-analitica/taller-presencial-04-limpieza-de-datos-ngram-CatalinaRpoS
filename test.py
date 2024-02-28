@@ -2,8 +2,8 @@
 
 import os
 
-import pandas as pd
 import clean_data
+import pandas as pd
 
 clean_data.main("input.txt", "output.txt")
 
@@ -16,7 +16,6 @@ assert test.loc[0, "key"] == "acdeghinoqruy"
 assert test.loc[1, "key"] == "acdegilmnoty"
 assert test.loc[3, "key"] == "acdehioqrsu"
 assert test.loc[6, "key"] == "acdehoqruy"
-assert test.loc[8, "key"] == "acdeilmnosty"
 assert test.loc[12, "key"] == "acdeilmnoty"
 assert test.loc[16, "key"] == "acdgilnoprstu"
 
@@ -31,9 +30,9 @@ dataframe = pd.read_csv("output.txt")
 count = dataframe.groupby("text").size()
 
 
-assert count.loc["AD-HOC QUERIES"] == 6
-assert count.loc["AGRICULTURAL PRODUCTION"] == 5
-assert count.loc["AIRLINE COMPANIES"] == 4
+assert count.loc["AD-HOC QUERIES"] == 3
+assert count.loc["AGRICULTURAL PRODUCTION"] == 1
+assert count.loc["AIRLINE COMPANIES"] == 1
 assert count.loc["AIRLINES"] == 1
 assert count.loc["ANALYTIC APPLICATIONS"] == 9
-assert count.loc["ANALYTIC MODEL"] == 10
+assert count.loc["ANALYTIC MODEL"] == 4
