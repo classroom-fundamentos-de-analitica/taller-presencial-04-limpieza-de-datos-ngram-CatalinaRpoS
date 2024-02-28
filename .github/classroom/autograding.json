@@ -3,7 +3,7 @@
     {
       "name": "Test",
       "setup": "pip install pyarrow pandas",
-      "run": "python3 tests.py",
+      "run": "python3 test.py",
       "input": "",
       "output": "",
       "comparison": "exact",
